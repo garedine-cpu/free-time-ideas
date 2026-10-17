@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EC">
+<title>Free Time Ideas</title>
+<style>
+:root{--bg:#F4F1EC;--card:#fff;--ink:#1F2A30;--muted:#5E6B72;--line:#E6E1D8;--accent:#2F4858;--r:18px}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+body{scroll-behavior:smooth}
+header{position:sticky;top:0;z-index:10;background:rgba(244,241,236,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:8px 0 4px}
+.top{display:flex;align-items:center;gap:10px;padding:0 12px 4px}
+h1{font-size:17px;margin:0;white-space:nowrap;letter-spacing:-.01em}
+#count{font-size:13px;color:var(--muted);white-space:nowrap}
+.search{flex:1;position:relative;min-width:0}
+.search input{width:100%;font-size:16px;height:36px;padding:0 10px 0 32px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,72,88,.12)}
+.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:.5}
+.row{display:flex;flex-wrap:nowrap;white-space:nowrap;gap:6px;overflow-x:auto;padding:3px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.row::-webkit-scrollbar{display:none}
+.row .lbl{flex:none;font-size:12px;font-weight:600;color:var(--muted);align-self:center;min-width:50px;text-transform:uppercase;letter-spacing:.03em}
+.f{flex:none;font-size:15px;height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.f[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+#notice{display:none;margin:12px 16px 0;padding:10px 14px;border-radius:12px;background:#FFF6E0;color:#6B4E00;font-size:15px;max-width:608px}
+@media(min-width:640px){#notice{margin:12px auto 0}}
+main{padding:14px 16px 40px;display:grid;gap:18px;max-width:640px;margin:0 auto}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 2px rgba(31,42,48,.06),0 6px 18px rgba(31,42,48,.07)}
+.ph{aspect-ratio:3/2;background:linear-gradient(135deg,#DDE6EA,#EFE6DA);display:block;width:100%;object-fit:cover}
+.body{padding:16px 18px 18px}
+.name{font-size:20px;font-weight:700;line-height:1.3;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.c{font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px;background:#EEF1F3;color:#34444D}
+.desc{margin:0 0 12px;font-size:17px}
+.meta{display:grid;gap:6px;margin:0 0 12px;font-size:16px}
+.meta div{display:flex;gap:8px}
+.meta b{flex:none;color:var(--muted);font-weight:600;min-width:52px}
+.meta a{color:var(--accent)}
+ul{margin:0 0 14px;padding-left:20px;color:#34444D}
+li{margin:3px 0}
+.btn{display:block;text-align:center;text-decoration:none;font-size:17px;font-weight:700;padding:14px;border-radius:14px;background:var(--accent);color:#fff}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><h1>Free Time Ideas</h1><div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F2A30" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search" aria-label="Search ideas"></div><span id="count"></span></div>
+  <div class="row" id="f-cat"><span class="lbl">Type</span></div>
+  <div class="row" id="f-who"><span class="lbl">Who</span></div>
+  <div class="row" id="f-io"><span class="lbl">In/Out</span></div>
+</header>
+<div id="notice"></div>
+<main id="list"><p class="empty">Loading ideas…</p></main>
+<script>
+(function(){
+var SHEET_ID="11UVa9eHWh-wRbGfe7uc-xjv5cZ0Hp3h51t48NFjikec", TAB="Ideas";
+var SNAPSHOT=[{"Idea": "Abstract Texture Art Jam Workshop", "Description": "A hands-on art jam at the Visual Arts Centre, building up bold abstract, textured artwork. Claimable via Culture Pass.", "Notes": "• Claimable via Culture Pass\n• Image: from Visual Arts Centre site", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Visual Arts Centre", "Category": "Art & Craft", "Who": "Both", "Photo URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVWP7n3CAAsipyK-80eNMSDNMhHY9iYdhKJ2s-HnV9Sg&s=10", "Link URL": "https://www.klook.com/en-SG/activity/165958-abstract-texture-art-jam-workshop/"}, {"Idea": "Oil Painting (OnePA course)", "Description": "Learn oil painting over 4 Tuesday-morning sessions at The Serangoon CC. A calm, steady way to pick up a real new skill.", "Notes": "• Tuesdays, 10:30 AM–12:30 PM\n• 27 Oct – 24 Nov 2026 (4 sessions, no class 10 Nov)\n• $65.00 member / $75.00 non-member\n• Registration closes 27 Oct 2026", "Status": "Want to try", "Cost (SGD)": "65", "Indoor/Outdoor": "Indoor", "Where": "The Serangoon CC, 10 Serangoon North Ave 2 (#05-05)", "Category": "Art & Craft", "Who": "Both", "Photo URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTevrUSKgXsfkMeOeLw0vqDnKXRbLGHFLuDiaw9KKup1A&s=10", "Link URL": "https://www.onepa.gov.sg/courses/oil-painting-c027247215"}, {"Idea": "Paintblush Textured Art Painting", "Description": "A 2-hour textured painting session with soft guidance and a bottomless-wine option. Relaxed, sociable art jamming.", "Notes": "• Linked option: bottomless wine $95.00\n• Glass of wine/soft drink option $65.00\n• 2 hrs, soft guidance\n• WhatsApp 8883 7211 before booking", "Status": "Want to try", "Cost (SGD)": "95", "Indoor/Outdoor": "Indoor", "Where": "", "Category": "Art & Craft", "Who": "Both", "Photo URL": "https://cdn.shopify.com/s/files/1/0637/4116/5760/files/Textured_Acrylic_Painting_Art_Jamming_Singapore_Paintblush.webp?v=1735460852&format=jpg&width=800", "Link URL": "https://paintblush.sg/products/textured-art-painting?variant=46998162997440"}, {"Idea": "Matisse Cut-Out Art (DIY)", "Description": "Cut bold shapes from coloured paper and arrange them Matisse-style. A playful, no-pressure art date at home.", "Notes": "• Coloured paper, scissors, glue\n• Inspired by Matisse's cut-outs\n• Frame the results", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Art & Craft", "Who": "Couple", "Photo URL": "https://images.unsplash.com/photo-1771440048434-0629e595fd37?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "The Great Gatsby: A Jazz Ballet Odyssey (Big Live)", "Description": "Big Live's jazz ballet take on The Great Gatsby at the Esplanade Theatre. A glamorous night out of dance and jazz.", "Notes": "• 27 Jan – 4 Feb 2027 (10 shows)\n• Evenings 8pm; Sat 3pm, Sun 2pm & 7pm\n• 2h incl. 20m interval\n• Tickets via SISTIC", "Status": "Want to try", "Cost (SGD)": "65", "Indoor/Outdoor": "Indoor", "Where": "Esplanade Theatre, 1 Esplanade Drive", "Category": "Culture & Tours", "Who": "Both", "Photo URL": "https://bigliveco.com/wp-content/uploads/2025/11/JamesWebsite-TheGreatGatsby-HomepageProductionListing.jpg", "Link URL": "https://bigliveco.com/performances/the-great-gatsby/"}, {"Idea": "Singapore City Free Walking Tour (Monster Day Tours)", "Description": "A 2.5-hour tip-based walk from Raffles Place to Merlion Park. An easy way to see the city's sights on foot.", "Notes": "• 2.5 hrs\n• Daily, 10:00 or 16:00\n• Tip-based, S$20–30 suggested\n• Book a slot online; arrive 15 min early", "Status": "Want to try", "Cost (SGD)": "0", "Indoor/Outdoor": "Outdoor", "Where": "Raffles Place MRT Exit A (ends Merlion Park)", "Category": "Culture & Tours", "Who": "Both", "Photo URL": "https://static.wixstatic.com/media/f0e24e_160a1cabb11c4a4d89a764d57e9edc67~mv2.jpg/v1/fill/w_4032,h_2268,al_c,q_90/MDT_FWT_04_5.jpg", "Link URL": "https://www.monsterdaytours.com/tours/singapore-city-free-walking-tour"}, {"Idea": "Beyond Michelin SG Food Tour (Chinatown)", "Description": "A 3-hour morning hawker trail through Chinatown with 8 tastings. Eat your way to local favourites beyond the Michelin names.", "Notes": "• 3 hrs\n• Daily, 9am–12pm (min 2 pax)\n• 8 hawker tastings\n• Book direct for $99 (vs $110); free cancel 48 hrs", "Status": "Want to try", "Cost (SGD)": "99", "Indoor/Outdoor": "Outdoor", "Where": "Chinatown Visitor Centre, 2 Banda St", "Category": "Food", "Who": "Both", "Photo URL": "https://www.letsgotoursingapore.com/wp-content/uploads/elementor/thumbs/imageedit_17_7321152378-rrs4epay0u4redm3whz522ow2p7vbkw43jjmzwurq4.jpg", "Link URL": "https://www.letsgotoursingapore.com/tours/beyond-michelin-sg-food-tour/"}, {"Idea": "Hosting: Karaoke night", "Description": "Sing along to YouTube karaoke on the TV with snacks and drinks. Loud, silly and easy to set up.", "Notes": "• YouTube karaoke on the TV\n• Optional: wireless mic\n• Snacks & drinks", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Board games night", "Description": "A cosy night of group-friendly board games, snacks and drinks. Easy laughs and a bit of friendly competition.", "Notes": "• Group-friendly game picks\n• Snacks & drinks", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1563941402622-4e7a488bcc57?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Couples dinner (French / Asian / SG couple)", "Description": "Invite a French, Asian or SG couple; each brings a signature dish. Swap recipes and stories around one table.", "Notes": "• Invite a French, Asian or SG couple\n• Each couple brings a signature dish\n• Swap recipes & stories", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1682264938594-3e655fd8541d?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: World potluck (friends from different countries)", "Description": "Friends from different countries each bring a signature dish from home. A mini world food tour in your living room.", "Notes": "• Friends from different countries\n• Each brings a signature dish from home\n• Mini food tour at home", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1759753944580-893912e0c052?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: DIY Pizza Night", "Description": "Ready-made bases and lots of toppings so everyone builds their own pizza. Low effort, high fun.", "Notes": "• Ready-made bases, sauces, cheese, toppings\n• Everyone makes their own\n• Effort: Low | Fun: High", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1635832801146-102d3bb7f88e?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Hotpot Night", "Description": "We provide broth, sauces and the hotpot set; guests bring one ingredient each. Cosy and great for long evenings.", "Notes": "• Guests bring 1 ingredient each\n• We provide broth, sauces, hotpot set\n• Effort: Low | Great for long evenings", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1753309054187-2291198d6616?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Games & Grazing Night", "Description": "Order pizza and snacks, then play Telestrations, Codenames and UNO No Mercy. No cooking, no schedule, just games.", "Notes": "• Order pizza + snacks\n• Games: Telestrations, Codenames, UNO No Mercy\n• No cooking, no schedule\n• Effort: Extremely low", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1746635732312-0083b7f9423f?fm=jpg&q=80&rect=0.22,0.08,0.56,0.56&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Cheese & Wine Party", "Description": "A relaxed evening around a cheese board and wine. Low effort, a little bit fancy.", "Notes": "• Cheese board + wine\n• Effort: Low", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1700760933443-84ef4f5feac4?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Taco & Margarita Night", "Description": "Lay out tortillas, fillings, salsa and toppings so everyone builds their own tacos. Guests bring their favourite drinks.", "Notes": "• Tortillas, ready fillings, salsa, toppings\n• Build your own tacos\n• Guests bring fave drinks", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1751902399757-fdeb1b5fd32f?fm=jpg&q=80&rect=0.2,0,0.8,1&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: DIY Sushi Hand-Roll Night", "Description": "Sushi rice, nori and ready fillings so everyone rolls their own hand rolls. No skills needed, just fun.", "Notes": "• Sushi rice, nori, cucumber, avocado, ready fillings\n• Everyone rolls their own\n• No skills needed", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1763647756796-af9230245bf8?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Fondue Night", "Description": "Dip bread, potatoes and veg in melted cheese, then finish with chocolate fondue. Cosy and made for sharing.", "Notes": "• Cheese fondue + bread, potatoes, veg\n• Chocolate fondue for dessert", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1765099271832-258bee41458b?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Music Bingo Night", "Description": "Play song snippets and cross off the ones you know. First full row wins: easy, noisy fun.", "Notes": "• Play song snippets\n• Cross off songs you know\n• First full row wins", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1489838720009-3286c4293fda?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Roast Your Friends PowerPoint Night", "Description": "Everyone preps a funny slide deck, like “Who'd get arrested first?” Playful laughs, never personal.", "Notes": "• Each preps a funny deck (e.g. \"Who'd get arrested first?\")\n• Playful, not personal", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1702628770460-29de8f6f5929?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Lip-Sync Battle", "Description": "Pick a song and perform it without singing; props and silly dances encouraged. Pure, ridiculous fun.", "Notes": "• Pick a song, perform without singing\n• Props + silly dances encouraged", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}, {"Idea": "Hosting: Poker Night", "Description": "Cards, chips and snacks for a laid-back poker night. Easy to set up, fun to bluff.", "Notes": "• Cards, chips, snacks", "Status": "Want to try", "Cost (SGD)": "", "Indoor/Outdoor": "Indoor", "Where": "Home", "Category": "Hosting", "Who": "Friends", "Photo URL": "https://images.unsplash.com/photo-1542145177-4dc9b8029711?fm=jpg&q=80&w=1200&h=800&fit=crop", "Link URL": ""}];
+var CAT={"Art & Craft":["#FDE7D9","#9A3B0B"],"Food":["#FFF1C7","#7A5600"],"Restaurants":["#FCE0E0","#8E1F1F"],"Sports & Outdoors":["#DDF3E2","#1E6B34"],"Culture & Tours":["#E6E3FA","#3E3591"],"Hosting":["#D9F2F2","#006064"]};
+var WHO={"Couple":["#F8D7E3","#9C2758"],"Friends":["#D6E8FA","#1A4F8B"],"Both":["#E6DAF5","#5B2C8F"]};
+var IO={"Indoor":["#E7EEF2","#2F4858"],"Outdoor":["#E2F2E6","#25613A"],"Both":["#EEF0E2","#555E1E"]};
+var ST={"Want to try":["#FFF3D6","#7A5300"],"Planned":["#DCEBFF","#1D4F91"],"Done":["#DFF5E3","#1E6B34"],"Done ✅":["#DFF5E3","#1E6B34"]};
+var state={cat:"All",who:"All",io:"All",q:""}, items=[];
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function url(u){u=String(u||"").trim();return /^https?:\/\//i.test(u)?u:""}
+function key(s){return String(s||"").toLowerCase().replace(/[^a-z]/g,"")}
+function pick(o,names){for(var i=0;i<names.length;i++){var k=key(names[i]);if(o[k]!=null&&o[k]!=="")return o[k]}return ""}
+function norm(o){
+  var cost=pick(o,["Cost (SGD)","Cost"]);
+  return {name:String(pick(o,["Idea","Name"])).trim(),desc:pick(o,["Description"]),notes:pick(o,["Notes"]),status:pick(o,["Status"]),
+    cost:cost,io:pick(o,["Indoor/Outdoor"]),where:pick(o,["Where"]),cat:pick(o,["Category"]),who:pick(o,["Who"]),
+    photo:url(pick(o,["Photo URL"])),link:url(pick(o,["Link URL"]))};
+}
+function fromObjects(arr){return arr.map(function(r){var o={};for(var k in r)o[key(k)]=r[k];return norm(o)}).filter(function(x){return x.name})}
+function fromGviz(resp){
+  var t=resp.table, labels=t.cols.map(function(c){return c.label||""}), rows=t.rows.map(function(r){return (r.c||[]).map(function(c){return c?(c.v!=null?c.v:""):""})});
+  if(!labels.some(function(l){return key(l)==="idea"})&&rows.length){labels=rows.shift().map(String)}
+  return fromObjects(rows.map(function(r){var o={};labels.forEach(function(l,i){o[l]=r[i]});return o}));
+}
+function money(v){if(v===""||v==null)return "";var n=Number(String(v).replace(/[^0-9.\-]/g,""));if(isNaN(n))return "";return n===0?"Free":"S$"+n.toFixed(2)}
+function chip(t,map){if(!t)return "";var c=map[t]||["#EEF1F3","#34444D"];return '<span class="c" style="background:'+c[0]+';color:'+c[1]+'">'+esc(t)+'</span>'}
+function isAddress(w){w=String(w||"").trim();return w&&!/^(home|online|tbc|tba|various|-)$/i.test(w)}
+function card(x){
+  var notes=String(x.notes||"").split(/\n+/).map(function(s){return s.replace(/^\s*[•\-\*]\s*/,"").trim()}).filter(Boolean);
+  var cost=money(x.cost), h='<article class="card">';
+  h+=x.photo?'<img class="ph" loading="lazy" decoding="async" src="'+esc(x.photo)+'" alt="" onerror="this.removeAttribute(\'src\')">':'<div class="ph"></div>';
+  h+='<div class="body"><h2 class="name">'+esc(x.name)+'</h2><div class="chips">'+chip(x.cat,CAT)+chip(x.who,WHO)+chip(x.io,IO)+chip(x.status,ST)+'</div>';
+  if(x.desc)h+='<p class="desc">'+esc(x.desc)+'</p>';
+  var m="";
+  if(x.where){m+='<div><b>Where</b><span>'+(isAddress(x.where)?'<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(x.where+", Singapore")+'" target="_blank" rel="noopener">'+esc(x.where)+' ↗</a>':esc(x.where))+'</span></div>'}
+  if(cost)m+='<div><b>Cost</b><span>'+cost+'</span></div>';
+  if(m)h+='<div class="meta">'+m+'</div>';
+  if(notes.length)h+='<ul>'+notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join("")+'</ul>';
+  if(x.link)h+='<a class="btn" href="'+esc(x.link)+'" target="_blank" rel="noopener">Open link</a>';
+  return h+'</div></article>';
+}
+function matches(x){
+  if(state.cat!=="All"&&x.cat!==state.cat)return false;
+  if(state.io!=="All"&&x.io!==state.io)return false;
+  if(state.who!=="All"){if(state.who==="Both"){if(x.who!=="Both")return false}else if(x.who!==state.who&&x.who!=="Both")return false}
+  if(state.q){var hay=[x.name,x.desc,x.notes,x.where,x.cat].join(" ").toLowerCase();if(hay.indexOf(state.q)<0)return false}
+  return true;
+}
+function render(){
+  var list=items.filter(matches);
+  document.getElementById("count").textContent=list.length+"/"+items.length;
+  document.getElementById("list").innerHTML=list.length?list.map(card).join(""):'<p class="empty">No ideas match these filters.</p>';
+}
+function buildRow(id,field,values){
+  var row=document.getElementById(id);row.querySelectorAll(".f").forEach(function(b){b.remove()});
+  ["All"].concat(values).forEach(function(v){var b=document.createElement("button");b.className="f";b.textContent=v;b.setAttribute("aria-pressed",String(state[field]===v));
+    b.onclick=function(){state[field]=v;row.querySelectorAll(".f").forEach(function(o){o.setAttribute("aria-pressed",String(o===b))});render();window.scrollTo({top:0,behavior:"smooth"})};row.appendChild(b)});
+}
+function uniq(f,order){var s={};items.forEach(function(x){if(x[f])s[x[f]]=1});var v=Object.keys(s);return v.sort(function(a,b){var ia=order.indexOf(a),ib=order.indexOf(b);return (ia<0?99:ia)-(ib<0?99:ib)||a.localeCompare(b)})}
+function start(data,live){
+  items=data;
+  buildRow("f-cat","cat",uniq("cat",Object.keys(CAT)));
+  buildRow("f-who","who",["Couple","Friends","Both"]);
+  buildRow("f-io","io",uniq("io",["Indoor","Both","Outdoor"]));
+  var n=document.getElementById("notice");
+  if(!live){n.style.display="block";n.textContent="Showing a saved copy. Live updates start once the sheet is shared as “Anyone with the link can view”."}else n.style.display="none";
+  render();
+}
+document.getElementById("q").addEventListener("input",function(e){state.q=e.target.value.trim().toLowerCase();render()});
+var done=false;
+window.__onSheet=function(resp){if(done)return;try{if(resp.status==="error")throw 0;var d=fromGviz(resp);if(!d.length)throw 0;done=true;start(d,true)}catch(e){fallback()}};
+function fallback(){if(done)return;done=true;start(fromObjects(SNAPSHOT),false)}
+var s=document.createElement("script");
+s.src="https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?tqx=out:json;responseHandler:__onSheet&headers=1&sheet="+encodeURIComponent(TAB)+"&_="+Date.now();
+s.onerror=fallback;document.head.appendChild(s);setTimeout(fallback,8000);
+})();
+</script>
+</body>
+</html>
